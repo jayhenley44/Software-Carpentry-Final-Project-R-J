@@ -39,7 +39,12 @@ footer {
     text-align: center;
 }
 
-.navbar-toggler {
-    font-size: 2.5rem;
-    padding: 0.5rem;
+/* Add this new media query */
+@media (min-width: 992px) {
+    .navbar-toggler {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        margin-left: auto;
+    }
 }
+
