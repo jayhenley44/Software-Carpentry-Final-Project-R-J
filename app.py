@@ -13,6 +13,7 @@ def home():
 def portfolio():
     return render_template('portfolio.html', year=datetime.now().year)
 
+
 @app.route('/blog')
 def blog():
     posts = get_posts()
