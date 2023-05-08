@@ -1,11 +1,38 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block header_title %}
-    Portfolio - My Personal Website
-{% endblock %}
+{% block header_title %}Portfolio{% endblock %}
 
 {% block content %}
-    <h2>Portfolio</h2>
-    <p>Here you'll find a showcase of my academic and professional projects, including descriptions, images, and relevant links.</p>
-    <!-- Add your projects here -->
+<div class="row">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <img class="card-img-top" src="{{ url_for('static', filename='img/project1.png') }}" alt="Project 1">
+      <div class="card-body">
+        <h5 class="card-title">Project 1</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <img class="card-img-top" src="{{ url_for('static', filename='img/project2.png') }}" alt="Project 2">
+      <div class="card-body">
+        <h5 class="card-title">Project 2</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <img class="card-img-top" src="{{ url_for('static', filename='img/project3.png') }}" alt="Project 3">
+      <div class="card-body">
+        <h5 class="card-title">Project 3</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
