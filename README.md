@@ -31,7 +31,7 @@ This is a personal website that showcases my portfolio, blog, and contact inform
 
 - Portfolio page showcasing my past projects.
 - Blog page for sharing my thoughts and experiences.
-- Contact page with a form for users to contact me.
+- Contact page (was going to have a form for users to contact me)
 - Integration with a SQLite database for managing blog posts.
 - Responsive design for mobile and desktop devices.
 
@@ -39,5 +39,6 @@ This is a personal website that showcases my portfolio, blog, and contact inform
 
 - Add more projects to the portfolio page.
 - Allow users to leave comments on blog posts.
+- Repeat similar database steps for blog post to handle contact form submissions and direct them to my email
 - Add social media links to the site.
 - Improve the design and layout of the site.
