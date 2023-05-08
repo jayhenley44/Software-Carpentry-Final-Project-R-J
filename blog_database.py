@@ -1,5 +1,5 @@
+from blog_post import Post
 import sqlite3
-
 
 
 def get_db_connection():
@@ -7,8 +7,10 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn, conn.cursor()
 
+
 def close_db_connection(conn):
     conn.close()
+
 
 def init_db():
     conn, cursor = get_db_connection()
@@ -22,7 +24,8 @@ def init_db():
 
     conn.commit()
     close_db_connection(conn)
-    
+
+
 def add_post(title, content, author, published_date):
     conn, cursor = get_db_connection()
 
@@ -34,7 +37,6 @@ def add_post(title, content, author, published_date):
     conn.commit()
     close_db_connection(conn)
 
-from blog_post import Post
 
 def get_posts():
     conn, cursor = get_db_connection()
@@ -44,12 +46,10 @@ def get_posts():
     posts = []
 
     for row in cursor.fetchall():
-        post = Post(row['id'], row['title'], row['content'], row['author'], row['published_date'])
+        post = Post(row['id'], row['title'], row['content'],
+                    row['author'], row['published_date'])
         posts.append(post)
 
     close_db_connection(conn)
 
     return posts
-
-
-
